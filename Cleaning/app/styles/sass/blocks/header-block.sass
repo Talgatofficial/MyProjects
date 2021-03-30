@@ -1,0 +1,173 @@
+body.is-sticky
+  .header
+    &-top
+      display: none
+    &-menu
+      padding-top: 0px
+      .logo
+        display: none
+      .logo-text
+        display: block
+        text-transform: uppercase
+        font-weight: bold
+        color: $logo-color2
+        font-size: 30px
+      nav
+        .nav
+          &-link
+            color: $logo-color2
+      &::before
+        height: 110%
+        transform: scale(0.95)
+        border-radius: 3px
+        opacity: 1
+        background: $coral
+.header
+  position: fixed
+  z-index: 11
+  width: 100%
+  transition: all 0.5s ease
+  &-top
+    height: 60px
+    padding: 10px 0px
+    background-color: $logo-color2
+    &-left
+      margin-left: 10px
+      svg
+        width: 30px
+        height: 30px
+        margin-right: 5px
+        fill: white
+        transition: all 0.5s ease
+      a
+        margin-right: 25px
+        text-decoration: none
+        color: white
+        transition: all 0.5s ease
+        &:hover
+          color: $dark
+          svg
+            fill: $dark
+    &-right
+      &-social
+        svg
+          width: 30px
+          height: 30px
+          margin-right: 15px
+          fill: white
+          transition: all 0.5s ease
+          &:hover
+            fill: $dark
+      &-button
+        .button
+          margin-left: 30px
+          color: white
+          border-color: white
+          &:hover
+            padding-right: 15px
+            padding-left: 15px
+            background-color: $dark
+  &-menu
+    display: flex
+    align-items: center
+    padding-top: 10px
+    transition: all 0.5s ease
+    &::before
+      content: ''
+      background-color: $logo-color2
+      width: 100%
+      height: 70%
+      position: absolute
+      opacity: 0.2
+      transition: all 0.5s ease
+    nav
+      .nav
+        margin-bottom: 0
+        &-item
+          color: white
+          margin-left: 10px
+        &-link
+          color: white
+          font-weight: bolder
+          transition: all 0.5s ease
+          &:hover
+            color: $dark
+            text-decoration: underline
+
+    .logo-text
+      display: none
+
+
+//@media (min-width: 576px)
++media-breakpoint-down(xs)
+  .header
+    &-top
+      height: 60px !important
+      &-left
+        display: none
+      &-right
+        flex-direction: row !important
+    nav
+      .nav
+        &-item
+          margin-left: 0px !important
+          margin-right: 6px
+          font-size: 12px
+          font-weight: 300
+    &-menu
+      padding-top: 0px
+
+  body.is-sticky
+    .header
+      &-menu
+        padding: 5px 0px
+        .logo-text
+          font-size: 18px
+    nav
+      .nav
+        &-item
+          font-size: 10px
+          margin-right: 10px
+
+// ≥768px
++media-breakpoint-down(sm)
+  .header
+    &-top
+      height: 90px
+      &-left
+        svg
+          width: 20px
+          height: 20px
+    &-menu
+      &::before
+        height: 40%
+    nav
+      .nav
+        margin-bottom: 0
+        &-item
+          color: white
+          margin-left: 5px
+
+// ≥992px
++media-breakpoint-down(md)
+  .header
+    &-top
+      height: 90px
+      &-left
+        &-email
+          margin-top: 5px
+          display: block
+      &-right
+        flex-direction: column
+        //&-social
+        //  //svg
+        &-button
+          .button
+            margin-top: 5px
+            margin-left: 10px
+            padding: 5px
+            font-size: 15px
+
+//
+//// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px)

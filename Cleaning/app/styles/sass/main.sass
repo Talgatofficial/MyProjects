@@ -1,0 +1,176 @@
+@import config
+@import "blocks/**/*"
+
+.button
+  display: inline-block
+  border: 1px solid $logo-color
+  color: whitesmoke
+  text-transform: uppercase
+  padding: 5px 10px
+  font-weight: 700
+  transition: all .25s ease
+  border-radius: 3px
+
+.img-responsive
+  width: 100%
+  height: auto
+.s-dark
+  background-color: #414e5b
+  color: #fff
+.accent-text
+  color: $dark
+  font-weight: 700
+
+.nav
+  display: flex
+  list-style-type: none
+  padding-left: 0
+  margin-left: 20px
+  li
+    a
+      text-decoration: none
+  &-item
+    margin-right: 10px
+  &-link
+    color: #212121
+    text-transform: uppercase
+    font-weight: 900
+
+.carousel-item-1
+  height: 490px
+  background: #C4C4C4
+  color: #fff
+  position: relative
+  h1, p
+    color: #212121
+.carousel-item .container-1
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  padding-bottom: 120px
+.clean
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 50%
+  margin-bottom: -200px
+
+.services
+  &-icon
+    display: inline-block
+    text-align: center
+    overflow: hidden
+    margin-bottom: 25px
+    &:hover
+      svg
+        fill: $dark
+        border-color: $dark
+        background-color: ghostwhite
+      h3
+        color: $dark
+        text-decoration: underline
+    svg
+      width: 120px
+      height: 120px
+      border: 3px solid $logo-color2
+      border-radius: 50%
+      fill: $logo-color2
+      transition: all 0.5s ease
+      padding: 10px
+    h3
+      font-weight: 700
+      text-transform: uppercase
+      margin-top: 20px
+      transition: all 0.5s ease
+      color: $logo-color2
+
+    &-text
+      p
+        margin: 0px
+        padding: 0px
+        font-weight: 300
+
+  &-main
+    background-color: #EFF3F6
+    text-align: center
+    padding: 50px 0
+    h2
+      color: $logo-color2
+      font-weight: 300
+    &-heading
+      margin-bottom: 50px
+    &-text
+      margin-top: 50px
+    &-footer
+      margin-top: 50px
+      font-weight: 300
+      font-size: 30px
+      color: $dark
+  &-rigth
+    margin-left: 40px
+    display: flex
+    margin-bottom: 30px
+    justify-content: start
+    align-items: center
+    &:hover
+      h3
+        color: $dark
+      svg
+        fill: $dark
+    &-icon
+      svg
+        width: 60px
+        height: 60px
+        margin-right: 10px
+        fill: $logo-color2
+        transition: all 0.5s ease
+    &-text
+      margin-left: 10px
+      text-align: start
+      h3
+        font-weight: 300
+        text-transform: uppercase
+
+//@media (min-width: 576px)
++media-breakpoint-down(xs)
+  .services
+    &-main
+      h2
+        font-size: 18px
+      &-text
+        img
+          margin-bottom: 20px
+      &-footer
+        font-size: 18px
+
+
+// ≥768px
++media-breakpoint-down(sm)
+// ≥992px
++media-breakpoint-down(md)
+
+.rewievs
+  background-color: #D6E9E9
+  .rewievs-slide
+    text-align: center
+    &-marg
+      margin-top: 40px
+      h3
+        font-size: 22px
+      .slide-descr
+        margin-top: 10px
+        font-size: 13px
+        color: #6E7B8B
+        margin-bottom: 10px
+      p
+        font-size: 15px
+        margin-bottom: 60px
+      .img-wrap
+        width: 116px
+        height: 116px
+        display: inline-block
+        border-radius: 10em
+        overflow: hidden
+        box-shadow: 0 0 0 6px #F59F1A
+        margin-bottom: 10px

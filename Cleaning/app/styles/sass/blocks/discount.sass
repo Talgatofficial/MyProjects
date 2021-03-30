@@ -1,0 +1,33 @@
+.discount
+  padding: 35px
+  text-align: center
+  background-color: $logo-color2
+  color: white
+  h3
+    text-transform: uppercase
+    font-weight: 900
+    font-size: 40px
+    margin-bottom: 20px
+  p
+    font-weight: 300
+    font-size: 20px
+  .button
+    border-color: ghostwhite
+    margin-top: 20px
+    font-size: 25px
+    padding: 10px 25px
+    transition: all 0.5s ease
+    &:hover
+      background-color: whitesmoke
+      color: $dark
+      border-color: $dark
+//@media (min-width: 576px)
++media-breakpoint-down(xs)
+  .discount
+    h3
+      font-size: 20px
+    p
+      font-size: 15px
+    .button
+      font-size: 18px
+      padding: 5px 15px
